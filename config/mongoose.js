@@ -1,6 +1,7 @@
 const mongoose = require('mongoose')
+const MONGODB_URI = process.eventNames.MONGODB_URI || 'mongodb://localhost/todo-list'
 
-mongoose.connect('mongodb://localhost/todo-list', { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect(MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true })
 // 取得資料庫連線狀態
 const db = mongoose.connection
 // 連線異常
